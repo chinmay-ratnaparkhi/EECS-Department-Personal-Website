@@ -5,22 +5,52 @@
     <link href="bootstrap.min.css" rel="stylesheet">
 	<link href="ul-styler.css" rel="stylesheet">
 	<script>
-	function startTime() {
-    var today=new Date();
-    var h=today.getHours();
-	if(h > 12) h= h-12;
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('current_time').innerHTML = h+":"+m+":"+s;
-    var t = setTimeout(function(){startTime()},500);
+	var bms = '<div class="row">'
+						+'<center>'
+						
+							+'<div class="col-lg-9"><p><a class="btn btn-default" href="https://github.com/chinmay-ratnaparkhi" target="_blank" role="button"><img src="images/git.png" height="40">&nbsp;&nbsp;Visit GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;'
+							+'<a class="btn btn-default" href="https://www.linkedin.com/in/chinmayratnaparkhi" target="_blank" role="button"><img src="images/linkedin.png" height="40">&nbsp;&nbsp;Visit LinkedIn&nbsp;</a>&nbsp;'
+							+'<a class="btn btn-default" href="https://iss.ku.edu/chinmay-ratnaparkhi" target="_blank" role="button"><img src="images/ku.png" height="40">&nbsp;&nbsp;Visit ISS-KU&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;'
+							+'<a class="btn btn-default" href="https://www.facebook.com/chinmay.tunes" target="_blank" role="button"><img src="images/facebook.png" height="40">&nbsp;&nbsp;Visit Facebook</a></p></div>'
+							+'<div class= "col-lg-3">	<a class="btn btn-default" role="button" onClick="revert();"><img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks</a></div>'
+						+'</center>'
+					+'</div >'
+					
+					
+	var bms_gone = '<div class="row">'
+						+'<center>'
+						
+							+'<div class="col-lg-9"></div>'
+							+'<div class= "col-lg-3">	<a class="btn btn-default" role="button" onClick="getbookmarkbar();"><img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks</a></div>'
+						+'</center>'
+					+'</div >'					
+	function startTime()
+	{
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			if(h > 12) h= h-12;
+		document.getElementById('current_time').innerHTML = h+":"+m+":"+s;
+		var t = setTimeout(function(){startTime()},500);
 	}
 
-	function checkTime(i) {
-    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
+	function checkTime(i) 
+	{
+		if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+		return i;
+	}
+	function getbookmarkbar()
+	{
+		document.getElementById('bookmarkbar_inpage').innerHTML  = bms;
+	}
+	
+	function revert()
+	{
+		document.getElementById('bookmarkbar_inpage').innerHTML  = bms_gone;
+	}
 </script>
 </head>
 <body onload= "startTime()">
@@ -44,6 +74,17 @@
 		</div>
 		</nav> -->
 		<h1>&nbsp;</h1>
+		<div id="bookmarkbar_inpage" class="row">
+			<div class="col-lg-10">asdas</div>
+			<div class="col-lg-2">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="btn btn-default" role="button" onClick="getbookmarkbar()">
+				<img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks
+				</a> 
+			</div>
+		</div>
+		<p>&nbsp;</p>
+				
 		<div class="row">
 			<div class="col-lg-4">
 				<center><img class="img-circle" src="images/ChinmayRatnaparkhi.jpg" alt="Generic placeholder image" style="width: 320px; height: 280px;"></center>
@@ -58,7 +99,6 @@
 			<div class="col-lg-8">
 				<div class="row">
 					<div class="jumbotron">
-						
 						<h1 style="font-size:60">Chinmay Ratnaparkhi</h1>
 						<p><br/>Electrical Engineering and Computer Science<br/><strong>University of Kansas</strong></p>
 						<div class="row">
