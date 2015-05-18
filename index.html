@@ -4,26 +4,8 @@
     <title>Chinmay Ratnaparkhi</title>
     <link href="bootstrap.min.css" rel="stylesheet">
 	<link href="ul-styler.css" rel="stylesheet">
+	<script src="bootstrap.js"></script>
 	<script>
-	var bms = '<div class="row">'
-						+'<center>'
-						
-							+'<div class="col-lg-9"><p><a class="btn btn-default" href="https://github.com/chinmay-ratnaparkhi" target="_blank" role="button"><img src="images/git.png" height="40">&nbsp;&nbsp;Visit GitHub&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;'
-							+'<a class="btn btn-default" href="https://www.linkedin.com/in/chinmayratnaparkhi" target="_blank" role="button"><img src="images/linkedin.png" height="40">&nbsp;&nbsp;Visit LinkedIn&nbsp;</a>&nbsp;'
-							+'<a class="btn btn-default" href="https://iss.ku.edu/chinmay-ratnaparkhi" target="_blank" role="button"><img src="images/ku.png" height="40">&nbsp;&nbsp;Visit ISS-KU&nbsp;&nbsp;&nbsp;&nbsp;</a>&nbsp;'
-							+'<a class="btn btn-default" href="https://www.facebook.com/chinmay.tunes" target="_blank" role="button"><img src="images/facebook.png" height="40">&nbsp;&nbsp;Visit Facebook</a></p></div>'
-							+'<div class= "col-lg-3">	<a class="btn btn-default" role="button" onClick="revert();"><img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks</a></div>'
-						+'</center>'
-					+'</div >'
-					
-					
-	var bms_gone = '<div class="row">'
-						+'<center>'
-						
-							+'<div class="col-lg-9"></div>'
-							+'<div class= "col-lg-3">	<a class="btn btn-default" role="button" onClick="getbookmarkbar();"><img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks</a></div>'
-						+'</center>'
-					+'</div >'					
 	function startTime()
 	{
 		var today=new Date();
@@ -41,15 +23,6 @@
 	{
 		if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
 		return i;
-	}
-	function getbookmarkbar()
-	{
-		document.getElementById('bookmarkbar_inpage').innerHTML  = bms;
-	}
-	
-	function revert()
-	{
-		document.getElementById('bookmarkbar_inpage').innerHTML  = bms_gone;
 	}
 </script>
 </head>
@@ -78,9 +51,28 @@
 			<div class="col-lg-10">asdas</div>
 			<div class="col-lg-2">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a class="btn btn-default" role="button" onClick="getbookmarkbar()">
-				<img src="images/li-icons/bookmark.png" >&nbsp;&nbsp; Bookmarks
-				</a> 
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					Bookmarks
+				</button>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					  </div>
+					  <div class="modal-body">
+						...
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					  </div>
+					</div>
+				  </div>
+				</div>				
 			</div>
 		</div>
 		<p>&nbsp;</p>
