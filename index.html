@@ -4,8 +4,26 @@
     <title>Chinmay Ratnaparkhi</title>
     <link href="bootstrap.min.css" rel="stylesheet">
 	<link href="ul-styler.css" rel="stylesheet">
+	<script>
+	function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+	if(h > 12) h= h-12;
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('current_time').innerHTML = h+":"+m+":"+s;
+    var t = setTimeout(function(){startTime()},500);
+	}
+
+	function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
 </head>
-<body>
+<body onload= "startTime()">
     <div class="container">
 		<!--<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -32,9 +50,9 @@
 				<br/><br/>
 				<ul class="vcard-details">
 					<li class="insti">The University of Kansas</li>
-					<li class="location">United States</li>
+					<li class="location">Lawrence, KS, United States of America</li>
 					<li class="email"><a class="email" href="mailto:chinmay.ratnaparkhi@gmail.com">chinmay.ratnaparkhi@ku.edu</a></li>
-					<li class="lastUpdt">11:05pm, May 15, 2015</li>
+					<li class="lastUpdt"><div id="current_time"></div></li>
 				</ul>
 			</div ><!-- /.col-lg-4 -->
 			<div class="col-lg-8">
