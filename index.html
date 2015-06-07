@@ -14,6 +14,32 @@
 	
 	<script type="text/javascript">
 	
+	function runScript(e) {
+    if (e.keyCode == 13) {
+		password_submit();
+		return false;
+    }
+}
+	
+	function show_mod(){
+	
+	$("#myModal").modal("hide");
+		$("#frndz_pw").modal("show");
+		document.getElementById("password_box").focus();
+		
+	}
+	
+	function password_submit(){
+		var temp_pass= document.getElementById("password_box").value;
+		if(temp_pass=='balaji0306@gmail.com')
+		{
+			window.location='PASSWRD_AUTH=TrueWatchFRNDS=TrueSessionVal=AUTHNTCTD_USR-Watch-friends-online-with-french-voiceover-french-subtitlesARIAHIDDEN=False.html';
+		}else{
+			document.getElementById("password_box").value= '';
+		}
+	}
+	
+	
 		$(document).ready(function(){
 			setTimeout(function(){generator();}, 3000);
 			$('[data-toggle="tooltip"]').tooltip(
@@ -80,7 +106,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				<h4 class="modal-title" id="myModalLabel">My Bookmarks</h4>
 			</div>
 			<div class="modal-body">
 				<center>
@@ -90,16 +116,36 @@
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="ISS KU" href="http://iss.ku.edu"><img src="images/icons/ku.png" height="30"></a>
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="Facebook" href="https://www.facebook.com/chinmay.tunes"><img src="images/icons/facebook.png" height="30"></a>
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="GitHub" href="https://github.com/chinmay-ratnaparkhi"><img src="images/icons/git.png" height="30"></a>
-						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="Payroll" href="https://hr.ku.edu/psp/hrprd/EMPLOYEE/HRMS/?cmd=logout&cmd=login&errorCode=127&languageCd=ENG"><img src="images/icons/payroll.png" height="30"></a>
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="G Drive" href="https://drive.google.com/drive/u/0/my-drive"><img src="images/icons/googledrive.png" height="30"></a>
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="Netflix" href="http://www.netflix.com/WiHome"><img src="images/icons/netflix.png" height="30"></a>
 						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="CheckIn" href="http://people.eecs.ku.edu/~cratnapa/iss/Scanner.html"><img src="images/icons/checkIn.png" height="30"></a>
+						<a target="_blank" type="button" class="btn btn-default" data-toggle="tooltip" data-original-title="FRNDZ" onClick='show_mod();'><img src="images/icons/frnds.png" height="30"></a>
 					</div>
 				</center>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- !! END OF THE MODAL -->
+
+
+
+<div class="modal fade" id="frndz_pw" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">User Authentication</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input type="password" class="form-control" id="password_box" placeholder="Administrative Password" onkeypress="return runScript(event)">
+				</div>
+				<div id="message_box"></div>
 			</div>
 		</div>
 	</div>
