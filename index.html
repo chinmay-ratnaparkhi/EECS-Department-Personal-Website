@@ -11,7 +11,11 @@
 	<link href= "ul-styler.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	
+	<style>
+		.jumbotron {
+			background:#F2EFFB;
+		}
+	</style>
 	<script type="text/javascript">
 	
 	function runScript(e) {
@@ -154,11 +158,10 @@
 
 <div class="container">
 	<h1>&nbsp;</h1>
-		<div id="bookmarkbar_inpage" class="row">
+	<!--	<div id="bookmarkbar_inpage" class="row">
 			<div class="col-lg-10"><br></div>
 			<div class="col-lg-2">
 				&nbsp;&nbsp;
-				<!-- Button trigger modal -->
 				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
 					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
 					&nbsp;View Bookmarks
@@ -166,6 +169,8 @@
 			</div>
 		</div>
 		<p>&nbsp;</p>
+		--->
+		
 		
 	<div class="row">
 		<div class="col-lg-5">
@@ -173,13 +178,12 @@
 	</div>
 	<div class="row">
 			<div class="col-lg-4">
-				<center><img class="img-circle" src="images/ChinmayRatnaparkhi.jpg" alt="Generic placeholder image" style="width: 320px; height: 280px;"></center>
+				<center><img class="img-circle" src="images/ChinmayRatnaparkhi.jpg" alt="Generic placeholder image" style="width: 220px; height: 220px;"></center>
 				<br/><br/>
 				<ul class="vcard-details">
 					<li class="insti">The University of Kansas</li>
 					<li class="location">Lawrence, KS, United States of America</li>
-					<li class="email"><a class="email" href="mailto:chinmay.ratnaparkhi@gmail.com">chinmay.ratnaparkhi@ku.edu</a></li>
-					<li class="lastUpdt"><div id="current_time"></div></li>
+					<li class="email"><a class="email" href="mailto:chinmay.ratnaparkhi@gmail.com">chinmay.ratnaparkhi@gmail.edu</a></li>
 				</ul>
 			</div ><!-- /.col-lg-4 -->
 			<div class="col-lg-8">
@@ -201,9 +205,6 @@
 							<div class="col-lg-3"> <p><a class="btn btn-default" href="https://www.facebook.com/chinmay.tunes" target="_blank" role="button"><img src="images/facebook.png" height="40">&nbsp;&nbsp;Visit Facebook</a></p></div>
 						</div>
 						</center>
-						<hr>
-						
-						<!--<p align="justify" style="font-size:18">Thank you very much for your participation in EECS 448 - Software Engineering I in Spring 2015.</p>-->
 					</div >
 				</div>
 			</div><!-- /.col-lg-4 -->
@@ -211,17 +212,17 @@
 		<div class="row">
 			<div class="col-lg-12" id="main_alerts"></div>
 		</div>
-		<hr>		
+
+		<h1 style="font-size:48px;padding:50px;text-align:center">Recent Work</h1>
 		<div class="row">
 			<div class="col-lg-4">
 				<div class= "jumbotron">
-					<center><img class="img-circle" src="images/softEng.jpg" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
-					<h3 >EECS 448 - Software Engineering</h3>
-					<a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="EECS 448" data-placement="bottom" data-content="This website was hosted on the departmental server for students enrolled in EECS 448 in Spring 2015. Status: Terminated.">Info</a>
-					&nbsp;<a class="btn btn-default" href="sftwr/index.html" target="_blank" role="button">Visit Website</a>
-					
+					<center><img class="img-circle" src="images/ku.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
+					<h3>International Student Services, KU</h3>
+					<a tabindex="0" class="btn btn-primary" data-toggle="popover" data-trigger="focus" title="International Student Services" data-placement="bottom" data-content="This website was developed for the International Student Services office at the University of Kansas. Status: Live.">Info</a>
+					<a class="btn btn-default" href="https://iss.ku.edu/" target="_blank" role="button">Visit Website</a >
 				</div>
-			</div>
+			</div>	
 			<div class="col-lg-4">
 				<div class= "jumbotron">
 					<center><img class="img-circle" src="images/geo.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
@@ -232,12 +233,30 @@
 			</div>
 			<div class="col-lg-4">
 				<div class= "jumbotron">
-					<center><img class="img-circle" src="images/ku.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
-					<h3>International Student Services, KU</h3>
-					<a tabindex="0" class="btn btn-primary" data-toggle="popover" data-trigger="focus" title="International Student Services" data-placement="bottom" data-content="This website was developed for the International Student Services office at the University of Kansas. Status: Live.">Info</a>
-					<a class="btn btn-default" href="https://iss.ku.edu/" target="_blank" role="button">Visit Website</a >
+					<center><img class="img-circle" src="images/softEng.jpg" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
+					<h3 >EECS 448 - Software Engineering</h3>
+					<a tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="EECS 448" data-placement="bottom" data-content="This website was hosted on the departmental server for students enrolled in EECS 448 in Spring 2015. Status: Terminated.">Info</a>
+					&nbsp;<a class="btn btn-default" href="sftwr/index.html" target="_blank" role="button">Visit Website</a>
 				</div>
 			</div>
+			<div class="col-lg-4">
+				<div class= "jumbotron">
+					<center><img class="img-circle" src="images/checkin.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
+					<h3>Summer 2015 CheckIn - ISS, KU</h3>
+					<a tabindex="0" class="btn btn-primary" data-toggle="popover" data-trigger="focus" title="International Student Services" data-placement="bottom" data-content="This website was developed for the International Student Services office at the University of Kansas. Status: Live.">Info</a>
+					<a class="btn btn-default" href="https://iss.ku.edu/iss/StationSelection.html" target="_blank" role="button">Visit Website</a >
+				</div>
+			</div>	
+			<div class="col-lg-4">
+				<div class= "jumbotron">
+					<center><img class="img-circle" src="images/animation.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></center>
+					<h3>Animation Project</h3>
+					<p class="muted">Perception of motion based on shadows of the objects.</p>
+					&nbsp;<a class="btn btn-default" href="http://people.eecs.ku.edu/~cratnapa/shadow/Shadow.html" target="_blank" role="button">Visit Website</a>
+				</div>
+			</div>
+			
+			
 		</div>
 		<hr>
 		<p align="justify" style="font-size:18">Thank you very much for your participation in EECS 448 - Software Engineering I in Spring 2015.</p>
